@@ -12,11 +12,11 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
-
-
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 const App = () => {
   return (
     <SafeAreaView 
@@ -29,6 +29,10 @@ const App = () => {
       >
       <View>
       <Text style={{ fontSize:30 , fontWeight:'bold', color:'#20315f', alignItems:'center' }}>Brothers & Friends</Text>
+      <TouchableOpacity>
+        <Text>Get Started</Text>
+        <MaterialIcons name="arrow-forward-ios" size={22} color="#000"></MaterialIcons>
+      </TouchableOpacity>
     </View>
     </SafeAreaView>
     
