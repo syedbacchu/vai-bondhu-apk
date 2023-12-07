@@ -3,40 +3,74 @@
  * https://github.com/facebook/react-native
  *
  * @format
+ * @flow strict-local
  */
 
 import React from 'react';
+import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
   Text,
-  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-const App = () => {
+
+import {
+  DebugInstructions,
+  Header,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+
+const Section = ({children, title}): Node => {
   return (
-    <SafeAreaView 
-      style={{ 
-        flex:1, 
-        justifyContent:'center', 
-        alignItems: 'center', 
-        backgroundColor:'#fff' 
-      }}
-      >
-      <View>
-      <Text style={{ fontSize:30 , fontWeight:'bold', color:'#20315f', alignItems:'center' }}>Brothers & Friends</Text>
-      <TouchableOpacity>
-        <Text>Get Started</Text>
-        <MaterialIcons name="arrow-forward-ios" size={22} color="#000"></MaterialIcons>
-      </TouchableOpacity>
+  <View className="mt-8 px-2">
+
+     <Text className="text-2xl text-black dark:text-white">
+        {title}
+      </Text>
+
+     <Text className="mt-2 text-lg text-black dark:text-white">
+        {children}
+      </Text>
     </View>
+  );
+};
+
+const App: () => Node = () => {
+  const isDarkMode = useColorScheme() === 'dark';
+ const backgroundStyle = "bg-neutral-300 dark:bg-slate-900"
+
+  return (
+   <SafeAreaView className={backgroundStyle}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+       className={backgroundStyle}>
+        <Header />
+
+       <View className="bg-white dark:bg-black">
+          <Section title="Step One">
+           Edit <Text className="font-bold">App.js</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <Section title="See Your Changes">
+            <ReloadInstructions />
+          </Section>
+          <Section title="Debug">
+            <DebugInstructions />
+          </Section>
+          <Section title="Learn More">
+            Read the docs to discover what to do next:
+          </Section>
+          <LearnMoreLinks />
+        </View>
+      </ScrollView>
     </SafeAreaView>
-    
-  )
-}
+  );
+};
+
 
 export default App;
