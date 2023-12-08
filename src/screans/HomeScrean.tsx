@@ -27,7 +27,7 @@ const HomeScrean = () => {
 
             </ScrollView>
             <View className=" items-center">
-            <Image source={require('../Assets/Images/logo.png')} />
+            <Image source={require('../assets/Images/logo.png')} />
             </View>
             <View className=" items-center mt-5">
                 <Text className="  font-bold text-lg text-black">Welcome to our Vai Bondhu Organisation</Text>
