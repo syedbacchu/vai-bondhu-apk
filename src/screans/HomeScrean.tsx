@@ -33,7 +33,7 @@ const HomeScrean = () => {
                 <Text className="  font-bold text-lg text-black">Welcome to our Vai Bondhu Organisation</Text>
             </View>
             <View className="p-3">
-                <Text className="text-justify text-sm">আসসালামু আলাইকুম। আমাদের ভাই বন্ধু সংগঠন একটি সম্পূর্ণ বেসরকারী এবং সুদ মুক্ত প্রতিষ্ঠান। আমরা রমজান মাসে ০১/০৪/২০২৩ তারিখ থেকে আমাদের যাত্রা শুরু করি। আমাদের কিছু বন্ধু এবং ভাই এই সংগঠনের প্রাথমিক সদস্য, এখন মোট সদস্য সংখ্যা ৫০ এর কাছাকাছি। এই সংগঠনের প্রত্যেক সদস্য সময়নিষ্ঠ, সৎ এবং পরিশ্রমী। আমাদের মূল লক্ষ্য হল একসাথে টাকা সঞ্চয় করা এবং সৎ উপায়ে মুনাফা অর্জনের চেষ্টা করা। অনুগ্রহ করে আমাদের জন্য দোয়া করুন যেন আমরা আমাদের গন্তব্যে নিখুঁতভাবে পৌঁছাতে পারি।</Text>
+                <Text className="text-justify text-sm">Assalamu Alaikum. Our Bhai Bandhu organization is a completely private and interest free organization. We start our journey from 01/04/2023 in the month of Ramadan. Some of our friends and brothers are early members of this organization, now the total membership is close to 50. Every member of this organization is punctual, honest and hardworking. Our main aim is to save money together and try to earn profit in an honest way. Please pray for us to reach our destination perfectly.</Text>
             </View>
         </SafeAreaView>
     );
