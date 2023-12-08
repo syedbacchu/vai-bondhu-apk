@@ -2,7 +2,7 @@ import { View ,Text, TouchableOpacity, Image} from "react-native"
 
 const DepositorView = ({name,details,image}:any) => {
     return (
-        
+        <View className={""}>
             <View className={"mr-6 bg-white rounded-3xl shadow-lg"}> 
                 <Image className={"h-24 w-16 rounded-t-3xl"} source={image}/>
                 <View className={"pb-4 space-y-2"}>
@@ -11,6 +11,8 @@ const DepositorView = ({name,details,image}:any) => {
                 </View>
                             
             </View>
+        </View>
+            
         
     );
 }

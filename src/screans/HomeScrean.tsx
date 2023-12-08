@@ -9,10 +9,12 @@ import SiteLogo from '../components/logo';
 import HeadingComponent from '../components/heading';
 import TopDepositor from '../components/topDepositor';
 import HomeStatusBox from '../components/homeStatusBox';
+import DueDepositor from '../components/dueDepositor';
 
 const HomeScrean = () => {
     return (
-        <SafeAreaView className="bg-white p-3">
+        <ScrollView>
+            <SafeAreaView className="bg-white p-3">
             <StatusBar barStyle="dark-content"/>
             <View className="flex-row items-center space-x-2 px-4 pb-2">
                 <View className="flex-row flex-1 items-center p-3 rounded-full border-gray-200">
@@ -45,14 +47,21 @@ const HomeScrean = () => {
                 <Text className="text-justify text-sm text-gray-600">Assalamu Alaikum. Our Bhai Bandhu organization is a completely private and interest free organization. We start our journey from 01/04/2023 in the month of Ramadan. Some of our friends and brothers are early members of this organization, now the total membership is close to 50. Every member of this organization is punctual, honest and hardworking. Our main aim is to save money together and try to earn profit in an honest way. Please pray for us to reach our destination perfectly.</Text>
             </View>
             <View className={"mt-5"}>
-                <HeadingComponent title={"Top Depositor"} description={"Person who deposit more than others"}/>
+                <HeadingComponent title={"Top Contributer"} description={"Person who deposit more than others"}/>
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20 }}>
                     <TopDepositor/>
                 </ScrollView>
             </View>
-            
+            <View className={"mt-5"}>
+                <HeadingComponent title={"Due Depositor"} description={"09 December 2023 's Due Deposit Member List"}/>
+                <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20 }}>
+                    <DueDepositor/>
+                </ScrollView>
+            </View>
             
         </SafeAreaView>
+        </ScrollView>
+        
     );
 }
 

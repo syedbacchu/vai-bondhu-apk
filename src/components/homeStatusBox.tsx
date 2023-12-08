@@ -45,7 +45,7 @@ const HomeStatusBox = () => {
         </View>
     </View>
 
-        {/* <View className={"flex-row justify-between mt-2"}>
+        <View className={"flex-row justify-between mt-2"}>
             <View className={" mx-2"}>
                 <View className={"border-2 border-orange-200 rounded-lg flex-row justify-between"}>
                     <View className={"p-3"}>
@@ -84,7 +84,48 @@ const HomeStatusBox = () => {
                     </View>
                 </View>
             </View>
-        </View> */}
+        </View>
+
+        <View className={"flex-row justify-between mt-2"}>
+            <View className={" mx-2"}>
+                <View className={"border-2 border-teal-200 rounded-lg flex-row justify-between"}>
+                    <View className={"p-3"}>
+                    
+                    <Text className={" text-xl font-bold text-gray-600"}>
+                        $450
+                    </Text>
+                    <Text className={"text-sm font-bold text-gray-600 mt-2"}>
+                    Investment
+                    </Text>
+                    </View>
+                    <View className={"mt-4 mr-5 mb-4"}>
+                    <Image
+                        className={"w-12 h-12"}
+                        source={require('../assets/Images/gifimages/profits.gif')}
+                    />
+                    </View>
+                </View>
+            </View>
+            <View className={" mx-2"}>
+                <View className={"border-2 border-blue-200 rounded-lg flex-row justify-between"}>
+                    <View className={"p-3"}>
+                        
+                        <Text className={" text-xl font-bold text-gray-600"}>
+                            $350
+                        </Text>
+                        <Text className={"text-sm font-bold text-gray-600 mt-2"}>
+                        Total Profit
+                        </Text>
+                    </View>
+                    <View className={"mt-4 mr-5 mb-4"}>
+                    <Image
+                        className={"w-12 h-12"}
+                        source={require('../assets/Images/gifimages/profit.gif')}
+                    />
+                    </View>
+                </View>
+            </View>
+        </View>
     </>
     
     
