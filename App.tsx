@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,7 +25,7 @@ import {
 import Navigation from './src/navigation';
 
 
-const App: () => Node = () => {
+const App = () => {
 //   const isDarkMode = useColorScheme() === 'dark';
 //  const backgroundStyle = "bg-neutral-300 dark:bg-slate-900"
 
