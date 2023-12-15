@@ -33,7 +33,7 @@ const DueDepositScreen = () => {
             </View>
            
             <View className={"mt-5"}>
-                <HeadingComponent title={"Due Depositor"} description={"09 December 2023 's Due Deposit Member List"}/>
+                <HeadingComponent title={"Due Depositor"} description={"09 December 2023 's Due Deposit Member List"} screen={"DueDepositor"}/>
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20 }}>
                     <DueDepositor/>
                 </ScrollView>

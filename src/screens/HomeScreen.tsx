@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { View, Text, StatusBar, TextInput, ScrollView, Image } from 'react-native';
+import { View, Text, StatusBar, TextInput, ScrollView, Image, Button } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Icon from "react-native-feather";
 import themeColors from '../theme';
@@ -10,8 +10,10 @@ import HeadingComponent from '../components/heading';
 import TopDepositor from '../components/topDepositor';
 import HomeStatusBox from '../components/homeStatusBox';
 import DueDepositor from '../components/dueDepositor';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScrean = () => {
+    const navigation = useNavigation();
     return (
         <ScrollView>
             <SafeAreaView className="bg-white p-3">
@@ -34,6 +36,9 @@ const HomeScrean = () => {
             <View className=" items-center">
                 <SiteLogo/>
             </View>
+            <View className=" items-center">
+                <Button title='Home' onPress={() => navigation.navigate('Main')}>Home</Text>
+            </View>
             <View className={"mt-4"}>
                 <HomeStatusBox/>
             </View>
@@ -47,13 +52,13 @@ const HomeScrean = () => {
                 <Text className="text-justify text-sm text-gray-600">Assalamu Alaikum. Our Bhai Bandhu organization is a completely private and interest free organization. We start our journey from 01/04/2023 in the month of Ramadan. Some of our friends and brothers are early members of this organization, now the total membership is close to 50. Every member of this organization is punctual, honest and hardworking. Our main aim is to save money together and try to earn profit in an honest way. Please pray for us to reach our destination perfectly.</Text>
             </View>
             <View className={"mt-5"}>
-                <HeadingComponent title={"Top Contributer"} description={"Person who deposit more than others"}/>
+                <HeadingComponent title={"Top Contributer"} description={"Person who deposit more than others"} screen={"DueDepositor"}/>
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20 }}>
                     <TopDepositor/>
                 </ScrollView>
             </View>
             <View className={"mt-5"}>
-                <HeadingComponent title={"Due Depositor"} description={"09 December 2023 's Due Deposit Member List"}/>
+                <HeadingComponent title={"Due Depositor"} description={"09 December 2023 's Due Deposit Member List"} screen={"DueDepositor"}/>
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20 }}>
                     <DueDepositor/>
                 </ScrollView>

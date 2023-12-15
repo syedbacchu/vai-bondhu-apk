@@ -2,7 +2,7 @@ import { View ,Text, TouchableOpacity, TouchableWithoutFeedback} from "react-nat
 import themeColors from "../theme";
 import { useNavigation } from "@react-navigation/native";
 
-const HeadingComponent = ({title,description}:any) => {
+const HeadingComponent = ({title,description,screen}:any) => {
     const navigation = useNavigation();
     return (
         <View className={"flex-row justify-between items-center px-1"}> 
@@ -10,7 +10,7 @@ const HeadingComponent = ({title,description}:any) => {
                 <Text className={"font-bold text-lg"}>{title}</Text>
                 <Text className={"text-xs text-gray-500"}>{description}</Text>
             </View>
-            <TouchableWithoutFeedback onPress={() => navigation.navigate('DueDepositor',{...title})}>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate(screen,{...title})}>
                 <Text  style={{ color:themeColors.text }} className={"font-semibold"}> See All</Text>
             </TouchableWithoutFeedback>
         </View>
