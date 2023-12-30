@@ -37,7 +37,10 @@ const HomeScrean = () => {
                 <SiteLogo/>
             </View>
             <View className=" items-center">
-                <Button title='Home' onPress={() => navigation.navigate('Main')}>Home</Text>
+                <Button title='Home' onPress={() => navigation.navigate('Main',{
+                    itemId: 86,
+                    otherParam: 'anything you want here',
+                })}>Home</Button>
             </View>
             <View className={"mt-4"}>
                 <HomeStatusBox/>
