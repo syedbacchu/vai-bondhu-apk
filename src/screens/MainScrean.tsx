@@ -12,14 +12,7 @@ const MainScrean = ({route}) => {
         <Text>Main Screen</Text>
         <Text>itemId: {JSON.stringify(itemId)}</Text>
         <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-        <Button className="mt-2"
-          title="Go to About... again"
-          onPress={() =>
-            navigation.navigate('Details', {
-              itemId: Math.floor(Math.random() * 100),
-            })
-          }
-        />
+        
         <Button className="mt-2" title="Go to About" onPress={() => navigation.navigate('About')} />
         <Button className="mt-2" title="Go back" onPress={() => navigation.goBack()} />
       </View>
