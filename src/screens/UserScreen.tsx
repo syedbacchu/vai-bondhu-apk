@@ -5,18 +5,11 @@ import { View, Text, Button } from 'react-native';
 import SiteLogo from '../components/logo';
 
 
-const AboutScrean = () => {
-    const navigation = useNavigation();
+const UserScreen = () => {
     return (
         <View>
-            <Text>About Screan</Text>
-            <Button
-                title="Back to home"
-                onPress={() => navigation.navigate('Main',{
-                    itemId: 86,
-                    otherParam: 'anything you want here',
-                })}
-                />
+            <Text>User Screan</Text>
+            
                  <View className=" items-center">
                     <SiteLogo/>
                 </View>
@@ -27,4 +20,4 @@ const AboutScrean = () => {
     );
 }
 
-export default AboutScrean;
+export default UserScreen;

@@ -6,6 +6,7 @@ import HomeScrean from './screens/HomeScreen';
 import MainScrean from './screens/MainScrean';
 import DueDepositScreen from './screens/DueDepositScreen';
 import AboutScrean from './screens/AboutScrean';
+import UserScreen from './screens/UserScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -14,10 +15,11 @@ const Navigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown:false}}>
-                <Stack.Screen name="Home" component={HomeScrean} options={{ title: 'Home Page' }}/>
+                {/* <Stack.Screen name="Home" component={HomeScrean} options={{ title: 'Home Page' }}/> */}
                 <Stack.Screen name="Main" component={MainScrean} options={{ title: 'Main Page' }}/>
-                <Stack.Screen name="DueDepositor" component={DueDepositScreen} options={{ title: 'Deposit' }}/>
+                {/* <Stack.Screen name="DueDepositor" component={DueDepositScreen} options={{ title: 'Deposit' }}/> */}
                 <Stack.Screen name="About" component={AboutScrean} options={{ title: 'About us' }}/>
+                <Stack.Screen name="User" component={UserScreen} options={{ title: 'User' }}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
